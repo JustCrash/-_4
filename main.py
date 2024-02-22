@@ -12,7 +12,7 @@ def user_interaction():
           'Нет - Закрыть программу. \n')
 
     while True:
-        user_choice_platform = input()
+        user_choice_platform = input().lower().strip()
         if user_choice_platform == 'да':
             print('HeadHunter')
             user_choice_hh()
