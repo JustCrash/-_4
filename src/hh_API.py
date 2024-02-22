@@ -7,12 +7,13 @@ class HeadHunterAPI(GetVacancies):
     """
     Класс для подключения к сайту hh.ru
     """
+
     def get_vacancies(self, name_job, pages):
         hh_list = []
         for i in range(pages):
             params = {
                 'text': name_job,
-                'per_page': 99,
+                'per_page': pages,
                 'pege': i
             }
             response = requests.get('https://api.hh.ru/vacancies', params=params)
