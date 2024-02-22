@@ -8,7 +8,7 @@ def user_interaction():
     print('Здравтсвуйте. \n'
           'Эта программа поможет вам в поиске вакансии на сайте: Headhunter. \n'
           'Введите да или нет. \n'
-          'Да - HeadHunter. \n'
+          'Да - Запустить программу. \n'
           'Нет - Закрыть программу. \n')
 
     while True:
@@ -25,5 +25,5 @@ def user_interaction():
             break
 
 
-if __name__ == '__name__':
+if __name__ == '__main__':
     user_interaction()
