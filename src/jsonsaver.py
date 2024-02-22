@@ -13,7 +13,7 @@ class JSONCSaver(Vacancies, JSONABCSaver):
             json.dump(self.to_list_dict(), file, indent=4, ensure_ascii=False)
 
     def file_reader(self):
-        with open('vacancies.json', 'r', encoding='utf-8') as file:
+        with open('../data/vacancies.json', 'r', encoding='utf-8') as file:
             list_dict = json.load(file)
             self.__all_vacancies = []
             for i in list_dict:
