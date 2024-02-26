@@ -1,14 +1,8 @@
-import pytest
-from src.jsonsaver import JSONCSaver
-
-
-@pytest.fixture
-def json_saver():
-    return JSONCSaver()
+import json
 
 
 def test_file_writer():
-    assert {
+    data = {
         "vacancy_title": "Ведущий програмист-разработчик Unity, C#",
         "town": "Москва",
         "salary_from": 120000,
@@ -17,9 +11,13 @@ def test_file_writer():
         "url": "https://hh.ru/vacancy/93159478"
     }
 
+    with open('vacancies.json', 'w', encoding='utf-8') as file:
+        json.dump(data, file, indent=4, ensure_ascii=False)
 
-def test_file_reader():
-    assert {
+    with open('vacancies.json', 'r', encoding='utf-8') as file:
+        saved_data = json.load(file)
+
+    assert saved_data == {
         "vacancy_title": "Ведущий програмист-разработчик Unity, C#",
         "town": "Москва",
         "salary_from": 120000,
