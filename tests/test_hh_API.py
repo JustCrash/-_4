@@ -2,7 +2,7 @@ import pytest
 from src.vacancy import Vacancy
 from abc import ABC
 from src.abstacted_classes import GetVacancies
-from src.hh_API import HeadHunterAPI
+from src.hh_api import HeadHunterAPI
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from src.hh_API import HeadHunterAPI
+from src.hh_api import HeadHunterAPI
 from src.jsonsaver import JSONCSaver
 
 
